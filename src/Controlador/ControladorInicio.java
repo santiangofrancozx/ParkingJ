@@ -10,7 +10,7 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 /**
  *
  * @author Lopez
- */
+ */ 
 public class ControladorInicio {
     
     PrincipalMenu menu;

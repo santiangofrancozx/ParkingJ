@@ -15,8 +15,9 @@ public class Main{
         Crear_DataBase crearDB = new Crear_DataBase(null, true);
         Delete_DB dDB = new Delete_DB();
         Crear_BD createDB = new Crear_BD();
+        ObtenerDB obteDB = new ObtenerDB();
         ControladorInicio cIni = new ControladorInicio(menu);
-        ControladorMenu cMenu = new ControladorMenu(menu, cu, crearDB, dDB);
+        ControladorMenu cMenu = new ControladorMenu(menu, cu, crearDB, dDB, obteDB);
         ControladorDB cDB = new ControladorDB(modelo, crearDB, createDB);
         cIni.inicio();
     }

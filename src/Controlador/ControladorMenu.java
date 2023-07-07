@@ -15,12 +15,14 @@ public class ControladorMenu implements ActionListener{
     Crear_Usuario cu;
     Crear_DataBase crearDB;
     Delete_DB dDB;
+    ObtenerDB obtDB;
     
-    public ControladorMenu(PrincipalMenu menu, Crear_Usuario cu, Crear_DataBase crearDB, Delete_DB dDB){
+    public ControladorMenu(PrincipalMenu menu, Crear_Usuario cu, Crear_DataBase crearDB, Delete_DB dDB, ObtenerDB obtDB){
         this.menu = menu;
         this.cu = cu;
         this.crearDB = crearDB;
         this.dDB = dDB;
+        this.obtDB = obtDB;
         this.menu.crearU.addActionListener(this);
         this.menu.crearBD.addActionListener(this);
         this.menu.eliminarBD.addActionListener(this);

@@ -8,6 +8,7 @@ import Modelo.*;
 import Vista.*;
 import Vista.DataBase.Crear_DataBase;
 import java.awt.event.*;
+import javax.swing.WindowConstants;
 
 
 public class ControladorDB implements ActionListener{
@@ -26,8 +27,14 @@ public class ControladorDB implements ActionListener{
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == vista.bGuardar){
             modelo.setNameBD(vista.caja_nombreBD.getText());
+            modelo.setDireIP(vista.caja_IP.getText());
+            modelo.setUserDB(vista.caja_UserBD.getText());
+            modelo.setPasswordDB(vista.caja_passBD.getText());
             System.out.println("hola");
             System.out.println(modelo.getNameBD());
+            System.out.println(modelo.getDireIP());
+            System.out.println(modelo.getUserDB());
+            System.out.println(modelo.getPasswordDB());
         }
         
         if(crear.createDB(modelo)){
@@ -37,7 +44,7 @@ public class ControladorDB implements ActionListener{
         }
         
         if(e.getSource() == vista.bCancelar){
-            
+           
         }
     }
     
